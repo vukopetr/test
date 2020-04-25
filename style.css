@@ -1,0 +1,21 @@
+.tabcontent {
+	display: none;
+}
+
+.tabcontent.active {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.error {
+	color: red;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 320px;
+	margin: 80px auto 32px;
+}
