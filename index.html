@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Registration Page</h1>
+		<form class="registration-form">
+			
+			<ul class="tabs">
+				<li class="active"><a href="#tab1">Email</a></li>
+	  			<li><a href="#tab2">Phone</a></li>
+	  		</ul>
+			
+			<div id="tab1" class="tabcontent active">
+				<label for="email active">Enter your email:</label>
+				<input type="text" id="email" name="email"> 
+			</div>
+			
+			<div id="tab2" class="tabcontent">
+				<label for="phone">Enter your phone number:</label>
+				<input type="text" id="phone" name="phone"> 
+			</div>
+			
+			<div class="radio-group">
+				<p>Please select your currency:</p>
+				  <input type="radio" id="dinar" name="currency" value="dinar">
+				  <label for="dinar">Serbian Dinar (RSD)</label><br>
+				  <input type="radio" id="dolar" name="currency" value="dolar">
+				  <label for="dolar">US Dolar (USD)</label><br>
+				  <input type="radio" id="euro" name="currency" value="euro">
+				  <label for="euro">EURO (EUR)</label>
+			 </div>
+			
+			<p><input type="checkbox" id="terms" name="terms"> I accept the <u>Terms and Conditions</u></p>
+			<p class="terms-feedback"></p>
+			<p><input type="checkbox" id="promo" name="promo"> I accept promotion notifications</p>
+			
+			<input type="submit" value="Submit">
+			<img class="loader hide" src="loader.gif">
+			<div class="feedback"></div>
+		</form>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
