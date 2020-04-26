@@ -15,8 +15,7 @@ body {
 }
 
 h1 {
-	background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 88.54%) repeat scroll 0%0% padding-box text;
-	color: transparent;
+	color: rgb(146, 23, 77);
 	font-size: 32px;
 	font-weight: 100;
 }
