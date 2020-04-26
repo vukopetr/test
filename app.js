@@ -23,11 +23,14 @@ validateEmail = () => {
 	const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	let emailResult = emailPattern.test(email);
 	const emailParent = document.getElementById('email').parentElement;
+	const emailError = document.querySelector('.email-error-feedback');
 	if( !emailResult && emailParent.classList.contains('active') ){
 		emailParent.classList.add('error');
 		submit = false;
+		emailError.innerText = 'Please enter valid email address.';
 	} else {
 		emailParent.classList.remove('error');
+		emailError.innerText = '';
 	}
 }
 
@@ -36,12 +39,15 @@ validatePhone = () => {
 	const phonePattern =  /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 	let phoneResult = phonePattern.test(phone);
 	const phoneParent = document.getElementById('phone').parentElement;
+	const phoneError = document.querySelector('.phone-error-feedback');
 
 	if( !phoneResult && phoneParent.classList.contains('active') ) {
 		phoneParent.classList.add('error');
 		submit = false;
+		phoneError.innerText = 'Please enter 10 digit number in XXX-XXX-XXXX format.';
 	} else {
 		phoneParent.classList.remove('error');
+		phoneError.innerText = '';
 	}
 }
 
@@ -91,7 +97,7 @@ showSuccessMessage = () => {
 
 	if(submit) {
 		setTimeout(() => {
-			feedback.innerText = "B R A V O !"
+			feedback.innerText = "Congratulation you have created account!"
 		}, 500);
 	} else {
 		feedback.innerText = '';
