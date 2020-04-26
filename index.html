@@ -17,12 +17,14 @@
 			
 			<div id="tab1" class="tabcontent active">
 				<label for="email active">Enter your email:</label>
-				<input type="text" id="email" name="email"> 
+				<input type="text" id="email" name="email" placeholder="email@web.com"> 
+				<p class="email-error-feedback"></p>
 			</div>
 			
 			<div id="tab2" class="tabcontent">
 				<label for="phone">Enter your phone number:</label>
-				<input type="text" id="phone" name="phone"> 
+				<input type="text" id="phone" name="phone"  placeholder="064-555-6666"> 
+				<p class="phone-error-feedback"></p>
 			</div>
 			
 			<div class="radio-group">
@@ -35,12 +37,16 @@
 				  <label for="euro">EURO (EUR)</label>
 			 </div>
 			
-			<p><input type="checkbox" id="terms" name="terms"> I accept the <u>Terms and Conditions</u></p>
-			<p class="terms-feedback"></p>
+			<div class="terms">
+				<p><input type="checkbox" id="terms" name="terms"> I accept the <u>Terms and Conditions</u></p>
+				<p class="terms-feedback"></p>
+			</div>
 			<p><input type="checkbox" id="promo" name="promo"> I accept promotion notifications</p>
-			
-			<input type="submit" value="Submit">
-			<img class="loader hide" src="loader.gif">
+
+			<input type="submit" value="Continue">
+			<div class="loader-container">
+				<img class="loader hide" src="loader.gif">
+			</div>
 			<div class="feedback"></div>
 		</form>
 	</div>
